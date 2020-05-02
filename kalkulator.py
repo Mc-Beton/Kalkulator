@@ -1,5 +1,5 @@
 import logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 
 #Funkcja odejmowania i dzielenia
@@ -8,13 +8,13 @@ def calculate(task, a, b):
     if task == "2":
         result = a-b
         logging.info(f"Odejmuję {a} od {b}")
-        logging.info(f"Wynik to {result}")
+        print(f"Wynik to {result}")
 
     #dzielenie
     elif task == "4":
         result = a/b
         logging.info(f"Dzielę {a} przez {b}")
-        logging.info(f"Wynik to {result}")
+        print(f"Wynik to {result}")
 
 #Funkcja dodawania i mnożenia
 def calculate2(task, a):
@@ -23,13 +23,13 @@ def calculate2(task, a):
         result = 0
         for ele in a:
             result = result + ele
-        logging.info(f"Suma wszystkich liczb to {result}")
+        print(f"Suma wszystkich liczb to {result}")
     #mnożenie
     elif task == "3":
         result=1
         for ele in a:
             result = result * ele
-        logging.info(f"wynik mnożenia wszystkich liczb to {result}")
+        print(f"wynik mnożenia wszystkich liczb to {result}")
 
 #funkcja wyboru działania
 def what_task(task):
