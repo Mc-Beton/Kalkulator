@@ -41,10 +41,14 @@ def what_task(task):
                 a.append(float(input())) 
         except: 
             print(calculate2(task, a))
-    elif task == "2":
-        a = float(input("Podaj pierwszą liczbę "))
-        b = float(input("Podaj drugą liczbę "))
-        print(calculate(task, a, b))
+    elif task == "2" or task == "4":
+        try:
+            while True:
+                a = float(input("Podaj pierwszą liczbę "))
+                b = float(input("Podaj drugą liczbę "))
+                print(calculate(task, a, b))
+        except:
+            print("To nie jest liczba!")
     elif task == "3":
         print("Podaj liczby jakie chcesz pomnożyć ze sobą kolejno je zatwierdzając i zakończ wpisaniem stop")
         try: 
@@ -53,10 +57,6 @@ def what_task(task):
                 a.append(float(input())) 
         except: 
             print(calculate2(task, a))
-    elif task == "4":
-        a = float(input("Podaj pierwszą liczbę "))
-        b = float(input("Podaj drugą liczbę "))
-        print(calculate(task, a, b))
 
 if __name__ == "__main__":
     task = input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie ")
