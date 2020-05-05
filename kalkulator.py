@@ -36,7 +36,7 @@ def what_task(task):
             a = [] 
             while True: 
                 a.append(float(input())) 
-        except:
+        except ValueError:
             logging.debug(f"Wprowadzono następujące liczby {a}")
             dodawanie(a)
     elif task == "2":
@@ -46,7 +46,7 @@ def what_task(task):
                 b = float(input("Podaj drugą liczbę "))
                 logging.debug(f"Wprowadzono liczby {a}, {b}")
                 odejmij(a, b)
-        except:
+        except ValueError:
             print("To nie jest liczba!")
     elif task == "3":
         print("Podaj liczby jakie chcesz pomnożyć ze sobą kolejno je zatwierdzając i zakończ wpisaniem stop")
@@ -54,7 +54,7 @@ def what_task(task):
             a = [] 
             while True: 
                 a.append(float(input())) 
-        except: 
+        except ValueError: 
             logging.debug(f"Wprowadzono następujące liczby {a}")
             mnozenie(a)
     elif task == "4":
@@ -64,7 +64,7 @@ def what_task(task):
                 b = float(input("Podaj drugą liczbę "))
                 logging.debug(f"Wprowadzono liczby {a}, {b}")
                 dzielenie(a, b)
-        except:
+        except ValueError:
             print("To nie jest liczba!")
 
 #wywołanie programu
