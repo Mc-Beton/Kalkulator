@@ -2,34 +2,31 @@ import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 
-#Funkcja odejmowania i dzielenia
-def calculate(task, a, b):
-    #odejmowanie
-    if task == "2":
-        result = a-b
-        logging.info(f"Odejmuję {a} od {b}")
-        print(f"Wynik to {result}")
+#Funkcja odejmowania
+def odejmij(a, b):
+    result = a-b
+    logging.info(f"Odejmuję {a} od {b}")
+    print(f"Wynik to {result}")
 
-    #dzielenie
-    elif task == "4":
-        result = a/b
-        logging.info(f"Dzielę {a} przez {b}")
-        print(f"Wynik to {result}")
+#Funkcja dzielenia
+def dzielenie(a, b):
+    result = a/b
+    logging.info(f"Dzielę {a} przez {b}")
+    print(f"Wynik to {result}")
 
-#Funkcja dodawania i mnożenia
-def calculate2(task, a):
-    #dodawanie
-    if task == "1":
-        result = 0
-        for ele in a:
-            result = result + ele
-        print(f"Suma wszystkich liczb to {result}")
-    #mnożenie
-    elif task == "3":
-        result=1
-        for ele in a:
-            result = result * ele
-        print(f"wynik mnożenia wszystkich liczb to {result}")
+#Funkcja dodawania
+def dodawanie(a):
+    result = 0
+    for ele in a:
+        result = result + ele
+    print(f"Suma wszystkich liczb to {result}")
+
+#Funkcja mnożenia
+def mozenie(a):
+    result=1
+    for ele in a:
+        result = result * ele
+    print(f"wynik mnożenia wszystkich liczb to {result}")
 
 #funkcja wyboru działania
 def what_task(task):
@@ -41,14 +38,14 @@ def what_task(task):
                 a.append(float(input())) 
         except:
             logging.debug(f"Wprowadzono następujące liczby {a}")
-            calculate2(task, a)
-    elif task == "2" or task == "4":
+            dodawanie(a)
+    elif task == "2":
         try:
             while True:
                 a = float(input("Podaj pierwszą liczbę "))
                 b = float(input("Podaj drugą liczbę "))
                 logging.debug(f"Wprowadzono liczby {a}, {b}")
-                logging.info(calculate(task, a, b))
+                odejmij(a, b)
         except:
             print("To nie jest liczba!")
     elif task == "3":
@@ -59,15 +56,23 @@ def what_task(task):
                 a.append(float(input())) 
         except: 
             logging.debug(f"Wprowadzono następujące liczby {a}")
-            calculate2(task, a)
-
+            mnozenie(a)
+    elif task == "4":
+        try:
+            while True:
+                a = float(input("Podaj pierwszą liczbę "))
+                b = float(input("Podaj drugą liczbę "))
+                logging.debug(f"Wprowadzono liczby {a}, {b}")
+                dzielenie(a, b)
+        except:
+            print("To nie jest liczba!")
 
 #wywołanie programu
 if __name__ == "__main__":
     task = input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie ")
     logging.debug(f"Zostało wywołane działanie numer {task}")
     what_task(task)
-    
+
     
 
     
