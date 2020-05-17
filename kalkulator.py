@@ -6,27 +6,27 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 def substr(a, b):
     result = a-b
     logging.info(f"Substracting {a} from {b}")
-    print(f"The result is {result}")
+    Print(f"The result is {result}")
 
 #Divide
 def div(a, b):
     result = a/b
     logging.info(f"Divinding {a} by {b}")
-    print(f"The result is {result}")
+    Print(f"The result is {result}")
 
 #Addition
 def addit(a):
     result = 0
     for ele in a:
         result = result + ele
-    print(f"The result of suming all the numbers is {result}")
+    Print(f"The result of suming all the numbers is {result}")
 
 #Multiply
 def multi(a):
     result=1
     for ele in a:
         result = result * ele
-    print(f"The reuslt of multiplying all numbers is {result}")
+    Print(f"The reuslt of multiplying all numbers is {result}")
 
 #Choose task
 def what_task(task):
@@ -47,7 +47,7 @@ def what_task(task):
                 logging.debug(f"Given numbers are {a}, {b}")
                 substr(a, b)
         except ValueError:
-            print("It is not a number")
+            Print("It is not a number")
     elif task == "3":
         print("What numbers would you like to multiply and finish by typing stop")
         try: 
@@ -65,7 +65,7 @@ def what_task(task):
                 logging.debug(f"Given numbers are {a}, {b}")
                 div(a, b)
         except ValueError:
-            print("It is not a number")
+            Print("It is not a number")
 
 #wywołanie programu
 if __name__ == "__main__":
