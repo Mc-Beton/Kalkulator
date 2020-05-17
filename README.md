@@ -33,21 +33,36 @@ Type in the number of task you would like to execute: 1 Addition, 2 Substraction
 
 c. lets type in some numbers by confirming them every time:
 
+
 Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
+
 2020-05-17 18:53:50,266 Type in what numbers would you like to sum and finish by typing stop
+
 12
+
 45
+
 87
+
 56
+
 
 d. in the end type in "stop" and there is the result:
 
+
 Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
+
 2020-05-17 18:50:42,018 Type in what numbers would you like to sum and finish by typing stop
+
 12
+
 45
+
 87
+
 56
+
 stop
+
 The result of suming all the numbers is 200.0
 
