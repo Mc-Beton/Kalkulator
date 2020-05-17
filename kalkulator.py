@@ -2,75 +2,75 @@ import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 
-#Funkcja odejmowania
-def odejmij(a, b):
+#Substraction
+def substr(a, b):
     result = a-b
-    logging.info(f"Odejmuję {a} od {b}")
-    print(f"Wynik to {result}")
+    logging.info(f"Substracting {a} from {b}")
+    print(f"The result is {result}")
 
-#Funkcja dzielenia
-def dzielenie(a, b):
+#Divide
+def div(a, b):
     result = a/b
-    logging.info(f"Dzielę {a} przez {b}")
-    print(f"Wynik to {result}")
+    logging.info(f"Divinding {a} by {b}")
+    print(f"The result is {result}")
 
-#Funkcja dodawania
-def dodawanie(a):
+#Addition
+def addit(a):
     result = 0
     for ele in a:
         result = result + ele
-    print(f"Suma wszystkich liczb to {result}")
+    print(f"The result of suming all the numbers is {result}")
 
-#Funkcja mnożenia
-def mozenie(a):
+#Multiply
+def multi(a):
     result=1
     for ele in a:
         result = result * ele
-    print(f"wynik mnożenia wszystkich liczb to {result}")
+    print(f"The reuslt of multiplying all numbers is {result}")
 
-#funkcja wyboru działania
+#Choose task
 def what_task(task):
     if task == "1":
-        logging.info("Podaj liczby jakie chcesz dodać kolejno je zatwierdzając i zakończ wpisaniem stop")
+        logging.info("What numbers would you like to sum and finish by typing stop")
         try: 
             a = [] 
             while True: 
                 a.append(float(input())) 
         except ValueError:
-            logging.debug(f"Wprowadzono następujące liczby {a}")
-            dodawanie(a)
+            logging.debug(f"List of given numbers {a}")
+            addit(a)
     elif task == "2":
         try:
             while True:
-                a = float(input("Podaj pierwszą liczbę "))
-                b = float(input("Podaj drugą liczbę "))
-                logging.debug(f"Wprowadzono liczby {a}, {b}")
-                odejmij(a, b)
+                a = float(input("What is your first number? "))
+                b = float(input("What is your second number? "))
+                logging.debug(f"Given numbers are {a}, {b}")
+                substr(a, b)
         except ValueError:
-            print("To nie jest liczba!")
+            print("It is not a number")
     elif task == "3":
-        print("Podaj liczby jakie chcesz pomnożyć ze sobą kolejno je zatwierdzając i zakończ wpisaniem stop")
+        print("What numbers would you like to multiply and finish by typing stop")
         try: 
             a = [] 
             while True: 
                 a.append(float(input())) 
         except ValueError: 
-            logging.debug(f"Wprowadzono następujące liczby {a}")
-            mnozenie(a)
+            logging.debug(f"List of given numbers {a}")
+            multi(a)
     elif task == "4":
         try:
             while True:
-                a = float(input("Podaj pierwszą liczbę "))
-                b = float(input("Podaj drugą liczbę "))
-                logging.debug(f"Wprowadzono liczby {a}, {b}")
-                dzielenie(a, b)
+                a = float(input("What is your first number? "))
+                b = float(input("What is your second number? "))
+                logging.debug(f"Given numbers are {a}, {b}")
+                div(a, b)
         except ValueError:
-            print("To nie jest liczba!")
+            print("It is not a number")
 
 #wywołanie programu
 if __name__ == "__main__":
-    task = input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie ")
-    logging.debug(f"Zostało wywołane działanie numer {task}")
+    task = input("Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide ")
+    logging.debug(f"The chosen task is {task}")
     what_task(task)
 
     
