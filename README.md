@@ -29,6 +29,7 @@ Type in the number of task you would like to execute: 1 Addition, 2 Substraction
 b. Lets choose Addition
 
 Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
+
 2020-05-17 18:53:50,266 Type in what numbers would you like to sum and finish by typing stop
 
 c. lets type in some numbers by confirming them every time:
