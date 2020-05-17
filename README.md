@@ -24,32 +24,32 @@ IV. Example:
 
 a. After calling out the program you'll get to choose what task you would like to do.
 
-Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide
+  Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide
 
 
 
 b. Lets choose Addition
 
-Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
+  Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
 
-2020-05-17 18:53:50,266 Type in what numbers would you like to sum and finish by typing stop
+  2020-05-17 18:53:50,266 Type in what numbers would you like to sum and finish by typing stop
 
 
 
 c. lets type in some numbers by confirming them every time:
 
 
-Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
+  Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
 
-2020-05-17 18:53:50,266 Type in what numbers would you like to sum and finish by typing stop
+  2020-05-17 18:53:50,266 Type in what numbers would you like to sum and finish by typing stop
 
-12
+  12
 
-45
+  45
 
-87
+  87
 
-56
+  56
 
 
 
@@ -57,19 +57,19 @@ Type in the number of task you would like to execute: 1 Addition, 2 Substraction
 d. in the end type in "stop" and there is the result:
 
 
-Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
+  Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide 1
 
-2020-05-17 18:50:42,018 Type in what numbers would you like to sum and finish by typing stop
+  2020-05-17 18:50:42,018 Type in what numbers would you like to sum and finish by typing stop
 
-12
+  12
 
-45
+  45
 
-87
+  87
 
-56
+  56
 
-stop
+  stop
 
-The result of suming all the numbers is 200.0
+  The result of suming all the numbers is 200.0
 
