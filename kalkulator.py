@@ -1,5 +1,5 @@
 import logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
 
 #Substraction
@@ -31,14 +31,9 @@ def multi(a):
 #Choose task
 def what_task(task):
     if task == "1":
-        logging.info("What numbers would you like to sum and finish by typing stop")
-        try: 
-            a = [] 
-            while True: 
-                a.append(float(input())) 
-        except ValueError:
-            logging.debug(f"List of given numbers {a}")
-            addit(a)
+        a = input("Podaj liczby, które chcesz do siebie dodać rozdzielając każdą spacją. Następnie zatwierdz enterem: ")
+        suma = [float(arg) for arg in a.split() if arg.isdigit()]
+        addit(suma)
     elif task == "2":
         try:
             while True:
@@ -49,14 +44,9 @@ def what_task(task):
         except ValueError:
             print("It is not a number")
     elif task == "3":
-        print("What numbers would you like to multiply and finish by typing stop")
-        try: 
-            a = [] 
-            while True: 
-                a.append(float(input())) 
-        except ValueError: 
-            logging.debug(f"List of given numbers {a}")
-            multi(a)
+        a = input("Podaj liczby, które chcesz ze sobą pomnożyć rozdzielając każdą spacją. Następnie zatwierdz enterem: ")
+        mult = [float(arg) for arg in a.split() if arg.isdigit()]
+        multi(mult)
     elif task == "4":
         try:
             while True:
