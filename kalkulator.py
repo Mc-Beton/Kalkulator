@@ -1,5 +1,4 @@
 import logging
-import sys
 import math
 import numpy
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
@@ -42,25 +41,21 @@ def multi(*args):
     
 #Choose task
 def what_task():
-    task = input("Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide or exit to quit ")
-    logging.debug(f"The chosen task is {task}")
-    if task == "1":
-        addit()
-        what_task()
-    if task == "2":
-        substr()
-        what_task()
-    if task == "3":
-        multi()
-        what_task()
-    if task == "4":
-        div()
-        what_task()
-    if task == "exit":
-        print("Bye")
+    while True:
+        task = input("Type in the number of task you would like to execute: 1 Addition, 2 Substraction, 3 Multiply, 4 Divide or exit to quit ")
+        logging.debug(f"The chosen task is {task}")
+        if task == "1":
+            addit()
+        if task == "2":
+            substr()
+        if task == "3":
+            multi()
+        if task == "4":
+            div() 
+        if task == "exit":
+            print("Bye")
+            break
         
-        
-
 #wywołanie programu
 if __name__ == "__main__":
     what_task()
